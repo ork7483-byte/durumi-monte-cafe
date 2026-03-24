@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@theme {
+  --color-monte-orange: #b84b30;
+  --color-monte-light: #f8f4e9;
+  --color-monte-dark: #2a2a2a;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-monte-light text-monte-orange antialiased selection:bg-monte-orange selection:text-monte-light;
+  }
+}
+
+/* Custom Utilities */
+.text-outline {
+  -webkit-text-stroke: 1px var(--color-monte-orange);
+  color: transparent;
+}
+
+.text-outline-light {
+  -webkit-text-stroke: 1px var(--color-monte-light);
+  color: transparent;
+}
+
+/* Hide scrollbar for clean look */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-monte-light);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-monte-orange);
+  border-radius: 4px;
+}
